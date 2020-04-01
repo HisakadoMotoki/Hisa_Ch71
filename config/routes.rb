@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
  # root to: "home#index"
   resources :board
+  post 'board/new', to: 'board#create'
 
 end

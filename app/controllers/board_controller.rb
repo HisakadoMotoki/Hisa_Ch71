@@ -15,6 +15,7 @@ class BoardController < ApplicationController
 
   def edit
   end
+  
   def update
   	if @board.update(board_params)
   		flash[:success] = "board was UPDATED"

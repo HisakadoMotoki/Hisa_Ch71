@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'board#index'
+  root to: 'boards#index'
   devise_for :users
  # root to: "home#index"
-  resources :board
-  post 'board/new', to: 'board#create'
+  resources :boards
+  post 'boards/new', to: 'boards#create'
 
 end

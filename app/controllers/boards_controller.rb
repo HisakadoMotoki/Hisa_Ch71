@@ -1,4 +1,4 @@
-class BoardController < ApplicationController
+class BoardsController < ApplicationController
   def index
   	@boards = Board.all
   end
@@ -15,13 +15,14 @@ class BoardController < ApplicationController
 
   def edit
   end
-  
+
   def update
   	if @board.update(board_params)
   		flash[:success] = "board was UPDATED"
   		redirect_to root_path
   	else
   		render 'edit'
+    end
   end
   def destroy
   	@board.destroy
@@ -37,8 +38,9 @@ class BoardController < ApplicationController
   def board_params
   	params.require(:board).permit(:name)
   end
+
   def set_board
   	@board = Board.find(params[:id])
   end
-end
+
 end

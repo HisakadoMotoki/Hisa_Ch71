@@ -1,6 +1,6 @@
 新しい掲示板を作成する
 
-<%= form_for ('board/create') do |f| %>
+<%= form_for @board do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name,placeholder: "The name of board", autofocus: true %>
 <%= f.submit class:'btn btn-primary btn-lg' %>

@@ -1,5 +1,6 @@
 <% obj.each do |board| %>
 
- <%= board.name %>
+
+<%= link_to board.name, board_path(board)  %>
 
  <% end %>

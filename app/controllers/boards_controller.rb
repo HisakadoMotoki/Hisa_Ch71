@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+before_action :set_board, only: [:edit, :update, :show, :destroy] 
+
   def index
   	@boards = Board.all
   end
@@ -31,6 +33,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    @books = Book.all
   end
 
   private

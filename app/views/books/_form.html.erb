@@ -1,0 +1,5 @@
+<%= form_for @book do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title,placeholder: "The name of スレッド", autofocus: true %>
+<%= f.submit class:'btn btn-primary btn-lg' %>
+<% end %>

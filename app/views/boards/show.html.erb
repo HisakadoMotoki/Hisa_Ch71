@@ -2,9 +2,3 @@
 <%= link_to "掲示板の名前を変更する", edit_board_path(@board) %>
 
 <%= link_to "スレッドを作成する", new_book_path %>
-
-<% @books.each do |book| %>
-
-<%= book.board_id　%>
-
-<% end %>

@@ -33,7 +33,6 @@ before_action :set_board, only: [:edit, :update, :show, :destroy]
   end
 
   def show
-    @books = Book.all
   end
 
   private
